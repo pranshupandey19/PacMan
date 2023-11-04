@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+@font-face {
+  font-family: Pranshu font;
+  src: url(./fonts/PixeloidSans-mLxMm.ttf);
+}
+body{
+  background-color: black;
+  font-family: Pranshu font;
+  /* cursor: url("http://www.rw-designer.com/cursor-view/19304.png"),auto; */
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  background-image: url(./assets/background1.png);
+  background-size: 100% 100%;
+}
+#parent-instruction{
+  height: 88px;
+  width: 380px;
+  position: absolute;
+  top: 22%;
+  left: 37%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instruction{
+  color: white;
+  font-size: 32px;
+  letter-spacing: 8px;
+  padding-left: 10px;
+}
+#parent-adventure{
+  position: absolute;
+  bottom: 29%;
+  left: 31%;
+  height: 50px;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adventure{
+  color: white;
+  letter-spacing: 13px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+#parent-play{
+  position: absolute;
+  height: 88px;
+  width: 450px;
+  bottom: 9%;
+  left: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play{
+  color:#FFD81F;
+  font-size: 59px;
+  letter-spacing: 8px;
+  padding-left: 10px;
+}
+
+.play:hover{
+  transform: scale(1.1);
+}
+#parent-play:hover{
+  cursor: pointer;
+}
+#parent-instruction{
+  cursor: pointer;
+}
+.instruction:hover{
+  transform: scale(1.1);
+}
