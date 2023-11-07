@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Pranshu font;
+  src: url(./fonts/PixeloidSans-mLxMm.ttf);
+}
+@font-face {
+  font-family: emulogic ;
+  src: url("./fonts/Emulogic-zrEw.ttf");
+}
+.container{
+  background-image: url("./assets/back.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 100%;
+}
+.enter-name{
+  position: absolute;
+  top: 36%;
+  left: 34%;
+  color: white;
+  font-family: Pranshu font;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+.name input{
+  position: absolute;
+  top: 45.5%;
+  left: 35.5%;
+  /* height: 10%; */
+  width: 32%;
+  background-color: transparent;
+  font-size: 35px;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-family: emulogic ;
+  letter-spacing: 10px;
+  color: #FFD81F;
+  /* caret-color: transparent; */
+}
+input:focus{
+  outline: none;
+  cursor: pointer;
+}
+.play{
+  color: #FFD81F;
+  font-family: Pranshu font;
+  position: absolute;
+  top: 63.5%;
+  left: 41.5%;
+  font-size: 30px;
+  letter-spacing: 7px;
+  height: 7%;
+  width: 19.5%;
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}

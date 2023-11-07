@@ -3,48 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css">
+    <link rel="shortcut icon" href="https://png.pngtree.com/png-clipart/20220303/original/pngtree-pac-man-png-image_7389760.png" type="image/x-icon"/>
     <title>PacMan</title>
-    <link rel="stylesheet" href="./game.css" />
-    <link
-      rel="shortcut icon"
-      href="https://png.pngtree.com/png-clipart/20220303/original/pngtree-pac-man-png-image_7389760.png"
-      type="image/x-icon"
-    />
   </head>
   <body>
-    <!-- score-card -->
-    <div class="scoreCard">
-      <span class="score">Score : 0</span>
-      <span class="life">Lives : 5</span>
+    <div class="container">
+      <div id="border1">
+        <div id="border2">
+      <div id="username">username</div>
+      <div class="scoreBoard">
+          <!-- <div id="username">username</div> -->
+          <span class="score">SCORE : 0</span>
+          <span class="lives"></span>
+      </div>
+          <div class="grid"></div>
+          <div class="btn">Start Game</div>
+      </div>
     </div>
-    <!-- game area -->
-    <div class="grid"></div>
-    <!-- ghosts -->
-    
+      </div>
+
       <div class="ghost">
-        <div class="eyes leftEye"></div>
-        <div class="eyes rightEye"></div>
+          <div class="eyes eyeleft"></div>
+          <div class="eyes eyeright"></div>
       </div>
-    
-    <!-- pacman -->
-    
+
+
       <div class="pacman">
-        <div class="eye"></div>
-        <div class="mouth"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
       </div>
-    
-    <!-- dot -->
-    <!-- <div class="boxes">
-      <div class="dot"></div>
-    </div> -->
-    <!-- bonus -->
-    <!-- <div class="boxes">
-      <div class="bonus"></div>
-    </div> -->
-    <!-- walls -->
-    <!-- <div class="boxes">
-      <div class="wall"></div>
-    </div> -->
+
+    <script src="game.js"></script>
   </body>
-  <script src="./game.js"></script>
 </html>
