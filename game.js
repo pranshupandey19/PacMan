@@ -12,18 +12,7 @@ const eatGhost = new Audio("./audio/pacman_eatghost.wav")
 
 const board = ['pink', 'blue', 'green', 'red', 'purple', 'orange','pink', 'blue', 'green', 'red', 'purple', 'orange'];
 const myBoard = [];
-const tempBoard = [
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1
-    , 1, 4, 4, 4, 2, 2, 2, 2, 2, 1
-    , 1, 1, 1, 1, 2, 2, 2, 2, 2, 1
-    , 1, 2, 1, 1, 1, 1, 1, 1, 2, 1
-    , 1, 2, 3, 2, 2, 2, 2, 2, 2, 1
-    , 1, 2, 1, 1, 1, 1, 1, 1, 2, 1
-    , 1, 2, 2, 2, 2, 1, 2, 2, 2, 1
-    , 1, 2, 1, 1, 1, 1, 1, 1, 2, 1
-    , 1, 2, 2, 2, 2, 2, 2, 2, 2, 1
-    , 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
-];
+const tempBoard = [ ];
 const keyz = {
   ArrowRight: false
   , ArrowLeft: false
@@ -72,7 +61,9 @@ document.addEventListener('keydown', (e) => {
   backgroundAudio.pause();
   gameBackgroundAudio.play();
   gameBackgroundAudio.load = true;
-  //console.log(e.code); // Key presses
+  //console.log(e.code); 
+  
+  // Key presses
   if (e.code in keyz) {
     keyz[e.code] = true;
   }
@@ -193,15 +184,13 @@ function move() {
             }
           }
  
-          //TESTING NO MOVING
-          //ghost.pos = oldPOS;//*****TESTING NO MOVING
           if (player.pos == ghost.pos) {
             //console.log('Ghost got you ' + ghost.namer);
             if (player.powerCount > 0) {
 
               eatGhost.play()
 
-              //YOU ate the ghost
+              //ghost is eaten
               player.score += 100;
               let randomRegenerateSpot = Math.floor(Math.random() * 40);
               //ghost.pos = startPosPlayer(randomRegenerateSpot);
@@ -330,16 +319,15 @@ function playerWins() {
     window.location.href = "./gameover.html"
     
   }, 1800);
-  // startGame.style.display = 'block';
+  
 }
  
 function endGame() {
   player.gamewin = false;
-  // startGame.style.display = 'block';
 }
  
 function gameReset() {
-  //console.log('paused');
+
   window.cancelAnimationFrame(player.play);
   g.inplay = false;
   player.pause = true;
@@ -383,7 +371,6 @@ function updateScore() {
       
     }, 1800);
 
-    // g.lives.innerHTML = 'GAME OVER';
   }
   else {
     g.score.innerHTML = `SCORE : ${player.score}`;
@@ -427,7 +414,7 @@ function createSquare(val) {
   div.classList.add('box');
   if (val == 1) {
     div.classList.add('wall');
-  } //add wall to element
+  } //add wall 
   if (val == 2) {
     const dot = document.createElement('div');
     dot.classList.add('dot');
